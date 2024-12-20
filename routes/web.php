@@ -3,13 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('Frontend.index');
-});
 
-// Route::get('/index', function () {
-//     return view('Frontend.index');
-// });
-Route::get('/detail', function (){
-    return view('Frontend.detail');
-});
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index'])->name('frontend.index');
+Route::get('/detail', [HomeController::class, 'detail'])->name('frontend.detail');

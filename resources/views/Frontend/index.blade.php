@@ -42,11 +42,11 @@
     
                         <!-- Call to Action Buttons -->
                         <div class="mt-8 flex flex-wrap justify-center gap-4">
-                            <a class="block w-full rounded border border-blue-600 bg-gradient-to-r from-blue-500 to-black  px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" href="#">
+                            <a href="{{route('frontend.index')}}" class="block w-full rounded border border-blue-600 bg-gradient-to-r from-blue-500 to-black  px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" href="#">
                                 Get Started
                             </a>
     
-                            <a class="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-gradient-to-r from-blue-500 to-black  focus:outline-none focus:ring active:bg-blue-500 sm:w-auto" href="#">
+                            <a href="{{route('frontend.index')}}" class="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-gradient-to-r from-blue-500 to-black  focus:outline-none focus:ring active:bg-blue-500 sm:w-auto" href="#">
                                 Learn More
                             </a>
                         </div>
@@ -120,7 +120,7 @@
             Efficient and reliable lead-acid batteries designed for e-rickshaws.
           </p>
           <button class="mt-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-black text-white rounded hover:from-blue-700 hover:to-black">
-           <a href="#"> View Details</a>
+           <a href="{{route('frontend.detail')}}"> View Details</a>
           </button>
         </div>
       </article>
@@ -138,7 +138,7 @@
             High-capacity lead-acid batteries for industrial applications.
           </p>
           <button class="mt-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-black text-white rounded hover:from-blue-700 hover:to-black">
-            <a href="#">View Details</a>
+            <a href="{{route('frontend.detail')}}">View Details</a>
           </button>
         </div>
       </article>
@@ -156,7 +156,7 @@
             Advanced lithium-ion batteries for efficient energy storage solutions.
           </p>
           <button class="mt-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-black text-white rounded hover:from-blue-700 hover:to-black">
-           <a href="#"> View Details</a>
+           <a href="{{route('frontend.detail')}}"> View Details</a>
           </button>
         </div>
       </article>

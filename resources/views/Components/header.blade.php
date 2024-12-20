@@ -1,101 +1,88 @@
-<nav class="bg-gradient-to-l from-blue-500 to-black  p-4">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="relative flex items-center justify-between h-16">
-            <!-- Left side: logo and menu -->
-            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div class="flex-shrink-0">
-                    <a href="#" class="text-white font-semibold text-xl">
-                        Σ-BΛƬƬΣЯY
-                    </a>
-                </div>
-                <div class="hidden sm:block sm:ml-6 ml-12">
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-[#BEDCFE] px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="#about" class="text-gray-300 hover:text-[#BEDCFE] px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="#" class="text-gray-300 hover:text-[#BEDCFE] px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                        
-                        <!-- Dropdown -->
-                        <div class="relative">
-                            <button class="text-gray-300 hover:text-[#BEDCFE] px-3 py-2 rounded-md text-sm font-medium">
-                                Products
-                            </button>
-                            <div class="absolute hidden bg-gray-700 text-white text-sm rounded-md shadow-lg w-48 mt-1 right-0 z-10 group-hover:block">
-                                <a href="#" class="block px-4 py-2">Lithium Batteries</a>
-                                <a href="#" class="block px-4 py-2">Lead Acid Batteries</a>
-                                <a href="#" class="block px-4 py-2">Solar Batteries</a>
-                            </div>
-                        </div>
+<nav class="bg-gradient-to-l from-blue-500 to-black w-full z-30">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4 md:px-24">
+      <!-- Logo Section -->
+      <div class="flex items-center">
+          <a href="/" class="hover:opacity-90 transition-opacity duration-300">
+              <a href="#" class="text-white font-semibold text-xl">
+                  Σ-BΛƬƬΣЯY
+              </a>
+          </a>
+      </div>
 
-                        <a href="#" class="text-gray-300 hover:text-[#BEDCFE] px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                    </div>
-                </div>
-            </div>
+      <!-- Mobile Toggle Button -->
+      <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-50 hover:text-blue-50 transition-colors duration-300 focus:outline-none z-20"
+          onclick="toggleMenu()"
+      >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+      </button>
 
-            <!-- Right side: Icons -->
-            <div class="flex items-center space-x-4">
-                <a href="#" class="text-gray-300 hover:text-[#BEDCFE]">
-                    <i class="ri-search-line text-xl"></i>
-                </a>
-                <a href="#" class="text-gray-300 hover:text-[#BEDCFE]">
-                    <i class="ri-shopping-cart-2-line text-xl"></i>
-                </a>
-                <a href="#" class="text-gray-300 hover:text-[#BEDCFE]">
-                    <i class="ri-shopping-bag-line text-xl"></i>
-                </a>
-            </div>
+      <!-- Navigation Links -->
+      <div
+          id="mobile-menu"
+          class="invisible md:visible fixed inset-0 bg-blue-400 md:static md:bg-transparent z-40"
+      >
+          <div class="flex flex-col h-full">
+              <!-- Mobile Close Button -->
+              <button 
+                  id="mobile-menu-close"
+                  class="md:hidden absolute top-4 right-4 text-gray-50 hover:text-blue-50 z-50"
+                  onclick="toggleMenu()"
+              >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+              </button>
 
-            <!-- Mobile Menu Toggle Button -->
-            <div class="sm:hidden">
-                <button id="mobile-menu-button" class="text-gray-300 hover:text-[#BEDCFE] focus:outline-none">
-                    <i class="ri-menu-3-line text-2xl"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mobile menu, initially hidden -->
-    <div class="sm:hidden hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="#" class="text-gray-300 hover:text-[#BEDCFE] block px-3 py-2 rounded-md text-base font-medium">Home</a>
-            <a href="#" class="text-gray-300 hover:text-[#BEDCFE] block px-3 py-2 rounded-md text-base font-medium">About</a>
-            <a href="#" class="text-gray-300 hover:text-[#BEDCFE] block px-3 py-2 rounded-md text-base font-medium">Services</a>
-            <a href="#" class="text-gray-300 hover:text-[#BEDCFE] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            
-            <!-- Mobile Dropdown -->
-            <div class="relative">
-                <button class="text-gray-300 hover:text-[#BEDCFE] px-3 py-2 rounded-md text-base font-medium w-full text-left">
-                    Products
-                </button>
-                <div class="hidden bg-gray-700 text-white text-sm rounded-md shadow-lg w-full mt-1 z-10 group-hover:block">
-                    <a href="#" class="block px-4 py-2">Lithium Batteries</a>
-                    <a href="#" class="block px-4 py-2">Lead Acid Batteries</a>
-                    <a href="#" class="block px-4 py-2">Solar Batteries</a>
-                </div>
-            </div>
-        </div>
-    </div>
+              <ul class="flex flex-col md:flex-row items-center justify-center md:justify-start space-y-6 md:space-y-0 md:space-x-8 p-6 md:p-0 h-full">
+                  <li class="w-full md:w-auto text-center md:text-left">
+                      <a href="{{route('frontend.index')}}" class="block py-2 text-lg md:text-md hover:text-blue-500 transition-colors duration-300 font-light text-white">Home</a>
+                  </li>
+                  <li class="w-full md:w-auto text-center md:text-left">
+                      <a href="#about" class="block py-2 text-md md:text-md hover:text-blue-500 transition-colors duration-300 font-light text-white">About</a>
+                  </li>
+                  
+                  <li class="w-full md:w-auto text-center md:text-left relative group">
+                      <button class="w-full py-2 text-md md:text-md hover:text-blue-500 transition-colors duration-300 focus:outline-none font-light text-white">
+                          <a href="#product">Products</a>
+                      </button>
+                      <!-- Mobile Dropdown -->
+                      <div class="md:absolute md:left-0 md:hidden md:group-hover:block md:w-48 md:bg-blue-300 md:rounded-md md:shadow-lg">
+                          <ul class="md:py-2 space-y-4 md:space-y-0">
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-blue-500 font-light text-white">Lead-Battery</a></li>
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-blue-500 font-light text-white">Lead-acid Battery</a></li>
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-blue-500 font-light text-white">Lead-acid Battery</a></li>
+                              <li><a href="#product" class="block px-4 py-2 text-md hover:bg-gray-100 hover:text-blue-500 font-light text-white">More</a></li>
+                          </ul>
+                      </div>
+                  </li>
+                 
+                  <li class="w-full md:w-auto text-center md:text-left">
+                      <a href="#service" class="block py-2 text-md md:text-md hover:text-blue-500 transition-colors duration-300 font-light text-white">Service</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
 </nav>
 
 <script>
-    // Toggle mobile menu visibility
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const dropdowns = document.querySelectorAll('.relative');
+function toggleMenu() {
+  console.log("Toggle function called");
+  const menu = document.getElementById('mobile-menu');
+  console.log("Menu element:", menu);
+  if (menu.classList.contains('invisible')) {
+      menu.classList.remove('invisible');
+      menu.classList.add('visible');
+  } else {
+      menu.classList.remove('visible');
+      menu.classList.add('invisible');
+  }
+}
 
-        // Toggle the mobile menu when the button is clicked
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Toggle the dropdown visibility when clicked
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function() {
-                const menu = dropdown.querySelector('.group-hover\\:block');
-                if (menu) {
-                    menu.classList.toggle('hidden');
-                }
-            });
-        });
-    });
+// Make sure the function exists in global scope
+window.toggleMenu = toggleMenu;
 </script>

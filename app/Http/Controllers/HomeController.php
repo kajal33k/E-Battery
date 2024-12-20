@@ -7,10 +7,17 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('Frontend.index');
     }
-    public function detail(){
+
+    public function detail()
+    {
         return view('Frontend.detail');
     }
+
+
 }
+
+   
